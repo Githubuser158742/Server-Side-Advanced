@@ -1,0 +1,115 @@
+﻿@model WebshopEF.PresentationModels.CreatePM
+
+@using (Html.BeginForm("Create", "Device", FormMethod.Post, new { @class = "form-actions", @enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-6">
+            <h2>New device</h2>
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Device.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Device.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Device.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Device.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Device.Description, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Device.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Device.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Device.Price, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Device.Price, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Device.RentPrice, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Device.RentPrice, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Device.RentPrice, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Device.Stock, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Device.Stock, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Device.Stock, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Upload" class="control-label col-md-2">Photo:</label>
+                    <div class="col-md-10">
+                        <input type="file" name="Upload" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Next" class="btn btn-primary" name="submit" />
+                    </div>
+                </div>
+                <p class="error">@Model.Error</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2>Select software</h2>
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.OperatingSystems)
+                    </div>
+                    <div class="col-md-5">
+                        @Html.DropDownListFor(model => model.OperatingSystemId, Model.OperatingSystems, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.OperatingSystems, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-5">
+                        <input type="submit" value="Add OS" class="btn btn-primary" name="submit" style="margin-top:15px" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.SelectedOperatingSystems)
+                    </div>
+                    <div class="col-md-5">
+                        @Html.ListBox("SelectedOperatingSystems", Model.SelectedOperatingSystems)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Frameworks)
+                    </div>
+                    <div class="col-md-5">
+                        @Html.DropDownListFor(model => model.FrameworkId, Model.Frameworks, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.OperatingSystems, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-5">
+                        <input type="submit" value="Add FR" class="btn btn-primary" name="submit" style="margin-top:15px" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.SelectedFrameworks)
+                    </div>
+                    <div class="col-md-5">
+                        @Html.ListBox("SelectedFrameworks", Model.SelectedFrameworks)
+                    </div>
+                </div>
+                <input type="hidden" name="idsOS" value="@Model.idsOS" />
+                <input type="hidden" name="idsFR" value="@Model.idsFR" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
