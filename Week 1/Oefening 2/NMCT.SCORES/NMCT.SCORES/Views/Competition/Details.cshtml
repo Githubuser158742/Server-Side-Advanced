@@ -1,0 +1,32 @@
+﻿@model NMCT.SCORES.Models.Competition
+
+@{
+    ViewBag.Title = "Details";
+}
+<h2>@Model.Name (@Model.Country.Name)</h2><br />
+<div class="table-responsive">
+    <table class="table table-hover">
+        <tr>
+            <td>Team A</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Team B</td>
+            <td>&nbsp;</td>
+        </tr>
+        @foreach (var item in Model.Scores)
+        {
+            <tr>
+                <td>@item.TeamA.Name</td>
+                <td>@item.ScoreA</td>
+                <td>@item.ScoreB</td>
+                <td>@item.TeamB.Name</td>
+                <td><a href="/Competition/Confirm/@item.Id">Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>
+<form method="get" action="/Competition/AddScore">
+    <a class="btn btn-default" href="/Competition/Index">Go back</a>
+    <input type="hidden" value="@Model.Id" name="competitionId" />
+    <input type="submit" value="Add Score" class="btn btn-primary" />
+</form>

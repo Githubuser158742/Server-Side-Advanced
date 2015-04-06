@@ -1,0 +1,40 @@
+﻿@model NMCT.SCORES.ViewModels.AddScoreVM
+@{
+    ViewBag.Title = "Add new score";
+}
+<h2>Add new score</h2>
+<br />
+<br />
+<form method="post" action="/competition/addscore">
+    <div class="form-group">
+        <label for="SelectedTeamA">Team A</label>
+        <select name="SelectedTeamA">
+            @foreach (var item in @Model.Teams)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="ScoreA">Score Team A</label>
+        <input type="text" name="ScoreA" />
+    </div>
+    <div class="form-group">
+        <label for="SelectedTeamB">Team B</label>
+        <select name="SelectedTeamB">
+            @foreach (var item in @Model.Teams)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="ScoreB">Score Team B</label>
+        <input type="text" name="ScoreB" />
+    </div>
+    <input type="hidden" value="@Model.CompetitionId" name="CompetitionId" />
+    <p>
+        <a href="/Competition/Details/@Model.CompetitionId" class="btn btn-default">Cancel</a>
+        <input class="btn btn-primary" type="submit" value="Submit" name="submit" />
+    </p>
+</form>

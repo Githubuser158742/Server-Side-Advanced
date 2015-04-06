@@ -1,0 +1,42 @@
+﻿@model SalesWeb.ViewModels.LocationSearchVM
+
+@{
+    ViewBag.Title = "_LocationSearch";
+}
+
+<h2>LocationSearch</h2>
+
+@using (Html.BeginForm("LocationSearch", "Search"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>LocationSearchVM</legend>
+
+        @if (ViewData.ModelState["NoLocationData"] != null)
+        { 
+          <div class="field-validation-error">  @ViewData.ModelState["NoLocationData"].Errors[0].ErrorMessage </div>  
+        }
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Row)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Row)
+            @Html.ValidationMessageFor(model => model.Row)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Position)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Position)
+            @Html.ValidationMessageFor(model => model.Position)
+        </div>
+
+        <p>
+            <input type="submit" value="Search by location" />
+        </p>
+    </fieldset>
+}

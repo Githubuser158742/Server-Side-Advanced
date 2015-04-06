@@ -1,0 +1,31 @@
+﻿@model SalesWeb.ViewModels.NameSearchVM
+
+
+@using (Html.BeginForm("NameSearch", "Search"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+ 
+
+    <fieldset>
+        <legend>NameSearchVM</legend>
+
+        @if (ViewData.ModelState["NoProductData"] != null)
+        { 
+           <div class="field-validation-error"> @ViewData.ModelState["NoProductData"].Errors[0].ErrorMessage  </div> 
+        }
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <p>
+            <input type="submit" value="Search by product." />
+        </p>
+    </fieldset>
+}
+

@@ -1,0 +1,16 @@
+﻿@model SalesWeb.ViewModels.SearchVM
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+<p>Zoeken op produkt naam: </p>	
+@Html.Partial("_NameSearchPartial", Model.NameSearch)	
+<p>Zoeken op stock locatie: </p>	
+@Html.Partial("_LocationSearchPartial", Model.LocationSearch)
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

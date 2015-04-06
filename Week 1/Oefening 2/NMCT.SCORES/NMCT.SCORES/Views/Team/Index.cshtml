@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Choose a competition";
+}
+<h2>Choose a competition</h2>
+<h3>Competition</h3>
+<br />
+<form method="get" action="/Team/Select">
+    <select name="competition">
+        @foreach (var item in ViewBag.Competitions)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+    </select>
+    <input type="submit" value="Choose" class="btn btn-primary" />
+</form>
+<br />
+@if (ViewBag.Show)
+{
+    <ul>
+        @foreach (var item in ViewBag.Teams)
+        {
+            <li value="@item.Id"><a href="/Team/View/@item.Id">@item.Name</a></li>
+        }
+    </ul>
+}

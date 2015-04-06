@@ -1,0 +1,26 @@
+﻿@model NMCT.SCORES.Models.Score
+@{
+    ViewBag.Title = "Confirm";
+}
+<h2>Do you want to remove selected score?</h2>
+<br />
+<table class="table">
+    <tr>
+        <td class="col-md-1">Team A</td>
+        <td class="col-md-1">&nbsp;</td>
+        <td class="col-md-1">&nbsp;</td>
+        <td class="col-md-1">Team B</td>
+    </tr>
+    <tr>
+        <td class="col-md-1">@Model.TeamA.Name</td>
+        <td class="col-md-1">@Model.ScoreA</td>
+        <td class="col-md-1">@Model.ScoreB</td>
+        <td class="col-md-1">@Model.TeamB.Name</td>
+    </tr>
+</table>
+<br />
+<form method="post" action="/Competition/Delete">
+    <a href="/Competition/Details/@Model.CompetitionId" class="btn btn-default">Cancel</a>
+    <input type="hidden" value="@Model.Id" name="id" />
+    <input type="submit" value="Confirm" class="btn btn-primary" />
+</form>

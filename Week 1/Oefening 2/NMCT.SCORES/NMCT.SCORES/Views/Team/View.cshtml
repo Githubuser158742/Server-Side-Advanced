@@ -1,0 +1,25 @@
+﻿@model IEnumerable<NMCT.SCORES.Models.Score>
+@{
+    ViewBag.Title = "Results";
+}
+<h2>Results of selected team</h2>
+<br />
+<table class="table table-hover">
+    <tr>
+        <td>Team A</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Team B</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TeamA.Name</td>
+            <td>@item.ScoreA</td>
+            <td>@item.ScoreB</td>
+            <td>@item.TeamB.Name</td>
+        </tr>
+    }
+</table>
+<br />
+<a class="btn btn-default" href="http://localhost:5426/Team">Go back</a>

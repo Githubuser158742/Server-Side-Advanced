@@ -1,0 +1,52 @@
+﻿@model SalesWeb.ViewModels.NameSearchVM
+
+@{
+    ViewBag.Title = "NameSearchIndex";
+}
+
+<h2>Name Search</h2>
+<p>
+@Html.ActionLink("Return to search form", "Search", "Search")
+</p>
+
+<table>
+    <tr>
+        <th>
+            Naam
+        </th>
+        <th>
+            prijs
+        </th>
+        <th>
+            aantal
+        </th>
+        <th></th>
+    </tr>
+
+
+@foreach (var item in Model.Products) {
+     <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @if (item.Inventories != null)
+                {
+                    foreach(var inv in item.Inventories)
+                    {           
+                        @inv.Count.ToString()<text>pieces on</text>
+                        @inv.Row.ToString()
+                        @inv.Position.ToString()                    
+                    }
+                }
+
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", "Product", new { id = item.ProductID, name= Model.Name }, null)
+            </td>
+        </tr>
+}
+</table>
