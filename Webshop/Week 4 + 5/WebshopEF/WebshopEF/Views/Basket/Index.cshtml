@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WebshopEF.Models.Basket>
+<h2>Winkelwagen</h2><br />
+<table class="table table-striped">
+    <tr>
+        <th class="col-md-1">Product</th>
+        <th class="col-md-1">Eenheidsprijs</th>
+        <th class="col-md-1">Aantal</th>
+        <th class="col-md-1">Totale Prijs</th>
+    </tr>
+    @foreach (var item in @Model)
+    {
+        <tr>
+            <td class="col-md-1">@item.Device.Name</td>
+            <td class="col-md-1">@item.Device.Price</td>
+            <td class="col-md-1">@item.Aantal</td>
+            <td class="col-md-1">@(item.Device.Price * item.Aantal)</td>
+        </tr>
+    }
+</table>
+<p class="left">
+    <a href="/Order/Checkout" class="btn btn-primary">Checkout</a>
+</p>
+<br />
+<p class="right"><strong>De totaalprijs bedraagt: &euro; @ViewBag.TotalePrijs</strong></p>

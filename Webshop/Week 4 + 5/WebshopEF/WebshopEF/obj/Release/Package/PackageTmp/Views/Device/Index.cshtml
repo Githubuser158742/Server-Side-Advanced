@@ -1,0 +1,11 @@
+﻿@model IEnumerable<WebshopEF.Models.Device>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <h2>@item.Name.Split('-')[0]</h2>
+            <p>@item.Description</p>
+            <a href="/Device/Details/@item.ID" class="btn btn-primary">Details</a>
+        </div>
+    }
+</div>

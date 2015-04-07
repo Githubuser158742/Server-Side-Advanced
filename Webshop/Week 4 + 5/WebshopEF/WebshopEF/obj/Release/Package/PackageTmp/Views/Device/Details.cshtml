@@ -1,0 +1,14 @@
+﻿@model WebshopEF.Models.Device
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Model.Name.Split('-')[0]</h2>
+        <p>
+            <img src="http://webshopef.blob.core.windows.net/images/@Model.Picture"/>
+        </p>
+        <p><b>Model</b>:@Model.Name</p>
+        <p><b>Huur mij voor</b>: &euro; @Model.RentPrice</p>
+        <p><b>Stock te verhuren</b>: &euro; @Model.Stock</p>
+        <br />
+        <a href="/Device/Index" class="btn btn-primary">Go back</a>
+    </div>
+</div>
