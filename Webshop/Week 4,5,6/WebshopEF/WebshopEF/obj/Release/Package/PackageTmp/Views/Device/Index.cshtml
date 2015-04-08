@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<WebshopEF.Models.Device>
+<a href="/Device/Create" class="btn btn-success">Create</a>
 <div class="row">
     @foreach (var item in Model)
     {
@@ -6,6 +7,7 @@
             <h2>@item.Name.Split('-')[0]</h2>
             <p>@item.Description</p>
             <a href="/Device/Details/@item.ID" class="btn btn-primary">Details</a>
+            <a href="/Basket/Add/@item.ID" class="btn btn-primary">Add Item</a>
         </div>
     }
 </div>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="ApplicationDbContext-Web.config Connection String" description="ApplicationDbContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:butseraen.database.windows.net,1433;Database=WebshopEF;User ID=jim@butseraen;Password=ss@123456;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jim\\Documents\\GitHub\\Server-Side-Advanced\\Webshop\\Week\ 4\\WebshopEF\\WebshopEF\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ApplicationDbContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jim\\Documents\\GitHub\\Server-Side-Advanced\\Webshop\\Week\ 4,5,6\\WebshopEF\\WebshopEF\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ApplicationDbContext']/@connectionString" />
   </parameter>
 </parameters>
