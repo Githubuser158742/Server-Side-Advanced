@@ -1,0 +1,20 @@
+﻿@model WebshopEF.Models.Device
+<div class="row">
+    <div class="col-md-4">
+        <h2>Add item to basket</h2><br />
+        <p>
+            <img src="http://webshopef.blob.core.windows.net/images/@Model.Picture" width="200" height="200" alt="" title="" />
+        </p><br />
+        <p><strong>Model</strong> @Model.Name</p>
+        <p><strong>Huur mij voor</strong>: &euro; @Model.RentPrice</p>
+        <p><strong>Stock te verhuren</strong>: &euro; @Model.Stock</p>
+        <form method="post" action="/Basket/Add">
+            <p><strong>Aantal te huren</strong>: <input type="text" value="0" name="number" /></p>
+            <input type="hidden" value="@Model.ID" name="id" /><br />
+            <p>
+                <a href="/Device/Index" class="btn btn-primary">Go back</a>
+                <input type="submit" value="Add to basket" class="btn btn-primary"/>
+            </p>
+        </form>
+    </div>
+</div>
