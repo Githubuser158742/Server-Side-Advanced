@@ -31,6 +31,9 @@ namespace WebshopEF.Models
         public DbSet<Framework> Framework { get; set; }
         public DbSet<OS> OS { get; set; }
         public DbSet<Basket> Basket { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrderLine> OrderLine { get; set; }
+
         public ApplicationDbContext()
             : base("ApplicationDbContext", throwIfV1Schema: false)
         {

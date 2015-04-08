@@ -205,6 +205,7 @@
     <Compile Include="Controllers\DeviceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -213,6 +214,10 @@
     <Compile Include="Migrations\201504071537406_init2.Designer.cs">
       <DependentUpon>201504071537406_init2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504081622128_init21.cs" />
+    <Compile Include="Migrations\201504081622128_init21.Designer.cs">
+      <DependentUpon>201504081622128_init21.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Basket.cs" />
@@ -220,6 +225,8 @@
     <Compile Include="Models\Framework.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderLine.cs" />
     <Compile Include="Models\OS.cs" />
     <Compile Include="PresentationModels\CreatePM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -229,6 +236,8 @@
     <Compile Include="Repositories\IBasketRepository.cs" />
     <Compile Include="Repositories\IDeviceRepository.cs" />
     <Compile Include="Repositories\IGenericRepository.cs" />
+    <Compile Include="Repositories\IOrderRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Services\IProductService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Startup.cs" />
@@ -299,6 +308,8 @@
     <Content Include="Views\Device\Create.cshtml" />
     <Content Include="Views\Basket\Add.cshtml" />
     <Content Include="Views\Basket\Index.cshtml" />
+    <Content Include="Views\Order\Checkout.cshtml" />
+    <Content Include="Views\Order\Thanks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -311,6 +322,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201504071537406_init2.resx">
       <DependentUpon>201504071537406_init2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504081622128_init21.resx">
+      <DependentUpon>201504081622128_init21.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

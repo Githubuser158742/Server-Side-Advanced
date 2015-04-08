@@ -39,6 +39,7 @@ namespace WebshopEF.Controllers
             return View(device);
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult Create()
         {

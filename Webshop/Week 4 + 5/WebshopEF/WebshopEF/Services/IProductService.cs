@@ -19,5 +19,7 @@ namespace WebshopEF.Services
         bool ValidateForm(WebshopEF.PresentationModels.CreatePM pm);
         void AddItemToBasket(Basket b);
         List<Basket> GetBasketItems(string user);
+        void UpdateBasket(string user);
+        void SaveOrder(Order order, List<Basket> items);
     }
 }

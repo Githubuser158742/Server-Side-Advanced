@@ -18,6 +18,7 @@ namespace WebshopEF.Controllers
             this.ps = ps;
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult Add(int? id)
         {
@@ -44,7 +45,8 @@ namespace WebshopEF.Controllers
 
             return RedirectToAction("Index");
         }
-        
+
+        [Authorize]
         [HttpGet]
         public ActionResult Index()
         {
