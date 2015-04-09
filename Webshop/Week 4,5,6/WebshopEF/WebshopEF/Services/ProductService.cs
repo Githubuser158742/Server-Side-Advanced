@@ -1,6 +1,8 @@
 ﻿using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
+using Microsoft.WindowsAzure.Storage.Queue;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -191,6 +193,17 @@ namespace WebshopEF.Services
                     context.Entry<Basket>(ol.Basket).State = EntityState.Unchanged;
                     context.Entry<OrderLine>(ol).State = EntityState.Added;
                 }
+
+                string json = JsonConvert.SerializeObject(o);
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
+
+                CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
+
+                CloudQueue queue = queueClient.GetQueueReference("orders");
+                queue.CreateIfNotExists();
+
+                CloudQueueMessage message = new CloudQueueMessage(json);
+                queue.AddMessage(message);
 
                 context.Order.Add(o);
                 context.SaveChanges();
