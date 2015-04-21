@@ -267,7 +267,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helper\PriceCalculator.cs" />
     <Compile Include="Migrations\201504071537406_init2.cs" />
     <Compile Include="Migrations\201504071537406_init2.Designer.cs">
       <DependentUpon>201504071537406_init2.cs</DependentUpon>
@@ -280,18 +279,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="PresentationModels\CreatePM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\BasketRepository.cs" />
-    <Compile Include="Repositories\DeviceRepository.cs" />
-    <Compile Include="Repositories\GenericRepository.cs" />
-    <Compile Include="Repositories\IBasketRepository.cs" />
-    <Compile Include="Repositories\IDeviceRepository.cs" />
-    <Compile Include="Repositories\IGenericRepository.cs" />
-    <Compile Include="Repositories\IOrderRepository.cs" />
-    <Compile Include="Repositories\OrderRepository.cs" />
-    <Compile Include="Services\IProductService.cs" />
-    <Compile Include="Services\ProductService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -380,6 +368,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WebshopEF.BusinessLayer\WebshopEF.BusinessLayer.csproj">
+      <Project>{92667371-f207-48a1-97fc-3e2ab877e247}</Project>
+      <Name>WebshopEF.BusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebshopEF.Models\WebshopEF.Models.csproj">
       <Project>{9df645e6-1752-4dcc-ad26-ed0cb7c80e87}</Project>
       <Name>WebshopEF.Models</Name>

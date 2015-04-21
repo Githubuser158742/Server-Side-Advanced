@@ -10,7 +10,7 @@ namespace WebshopEF.Migrations
     using System.Linq;
     using WebshopEF.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WebshopEF.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<WebshopEF.BusinessLayer.Context.ApplicationDbContext>
     {
         private string pathDevices = AppDomain.CurrentDomain.BaseDirectory + "..\\App_Data\\Devices.txt";
         private string pathFrameworks = AppDomain.CurrentDomain.BaseDirectory + "..\\App_Data\\ProgrammingFramework.txt";
@@ -25,7 +25,7 @@ namespace WebshopEF.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(WebshopEF.Models.ApplicationDbContext context)
+        protected override void Seed(WebshopEF.BusinessLayer.Context.ApplicationDbContext context)
         {
             seedDevices(context);
             seedFrameworks(context);
@@ -33,7 +33,7 @@ namespace WebshopEF.Migrations
             seedRoles(context);
         }
 
-        public void seedRoles(WebshopEF.Models.ApplicationDbContext context)
+        public void seedRoles(WebshopEF.BusinessLayer.Context.ApplicationDbContext context)
         {            
             string roleAdmin = "Admin";
             string roleUser = "User";
@@ -70,7 +70,7 @@ namespace WebshopEF.Migrations
                 manager.AddToRole(user.Id, roleAdmin);
             }
         }
-        public void seedFrameworks(WebshopEF.Models.ApplicationDbContext context)
+        public void seedFrameworks(WebshopEF.BusinessLayer.Context.ApplicationDbContext context)
         {
             using(StreamReader sr = new StreamReader(pathFrameworks))
             {
@@ -94,7 +94,7 @@ namespace WebshopEF.Migrations
             context.SaveChanges();
         }
 
-        public void seedOperatingSystems(WebshopEF.Models.ApplicationDbContext context)
+        public void seedOperatingSystems(WebshopEF.BusinessLayer.Context.ApplicationDbContext context)
         {
             using(StreamReader sr = new StreamReader(pathOperatingSystems))
             {
@@ -119,7 +119,7 @@ namespace WebshopEF.Migrations
             context.SaveChanges();
         }
 
-        public void seedDevices(WebshopEF.Models.ApplicationDbContext context)
+        public void seedDevices(WebshopEF.BusinessLayer.Context.ApplicationDbContext context)
         {
             using(StreamReader sr = new StreamReader(pathDevices))
             {

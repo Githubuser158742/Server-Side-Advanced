@@ -722,3 +722,5 @@ C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF\bin\WebshopEF.BusinessLayer.dll
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF\bin\WebshopEF.BusinessLayer.pdb
