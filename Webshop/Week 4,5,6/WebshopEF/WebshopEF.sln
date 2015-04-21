@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebshopEF.Models", "Webshop
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebshopEF.BusinessLayer", "WebshopEF.BusinessLayer\WebshopEF.BusinessLayer.csproj", "{92667371-F207-48A1-97FC-3E2AB877E247}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderWebJob", "OrderWebJob\OrderWebJob.csproj", "{E7E95C52-92C3-4A47-99D7-25F7C583C5E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{92667371-F207-48A1-97FC-3E2AB877E247}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92667371-F207-48A1-97FC-3E2AB877E247}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92667371-F207-48A1-97FC-3E2AB877E247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7E95C52-92C3-4A47-99D7-25F7C583C5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7E95C52-92C3-4A47-99D7-25F7C583C5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7E95C52-92C3-4A47-99D7-25F7C583C5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7E95C52-92C3-4A47-99D7-25F7C583C5E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
