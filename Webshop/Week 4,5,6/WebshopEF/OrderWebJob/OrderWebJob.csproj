@@ -81,6 +81,16 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebshopEF.BusinessLayer\WebshopEF.BusinessLayer.csproj">
+      <Project>{92667371-f207-48a1-97fc-3e2ab877e247}</Project>
+      <Name>WebshopEF.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebshopEF.Models\WebshopEF.Models.csproj">
+      <Project>{9df645e6-1752-4dcc-ad26-ed0cb7c80e87}</Project>
+      <Name>WebshopEF.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

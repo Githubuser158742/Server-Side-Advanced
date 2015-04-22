@@ -5,17 +5,32 @@ using System.Web;
 using System.Web.Mvc;
 using WebshopEF.Helper;
 using WebshopEF.Models;
-using WebshopEF.Services;
+using WebshopEF.BusinessLayer.Services;
 
 namespace WebshopEF.Controllers
 {
     public class BasketController : Controller
     {
-        private IProductService ps;
+        private IDeviceService ds = null;
+        private IBasketService bs = null;
 
-        public BasketController(IProductService ps)
+        public BasketController(IDeviceService ds,IBasketService bs)
         {
-            this.ps = ps;
+            this.ds = ds;
+            this.bs = bs;
+        }
+
+        [Authorize]
+        [HttpGet]
+        public ActionResult Index()
+        {
+            string user = User.Identity.Name;
+            List<Basket>items = bs.GetBasketItems(user);
+
+            PriceCalculator calculator = new PriceCalculator(items);
+            ViewBag.TotalePrijs = calculator.BerekenPrijs();
+
+            return View(items);
         }
 
         [Authorize]
@@ -25,7 +40,7 @@ namespace WebshopEF.Controllers
             if (!id.HasValue)
                 return RedirectToAction("Index");
             Device d = new Device();
-            d = ps.GetDeviceById(id.Value);
+            d = ds.GetDeviceById(id.Value);
 
             return View(d);
         }
@@ -40,30 +55,17 @@ namespace WebshopEF.Controllers
             b.Aantal = number.Value;
             b.Timestamp = DateTime.Now;
             b.User = User.Identity.Name;
-            b.Device = ps.GetDeviceById(id.Value);
-            ps.AddItemToBasket(b);
+            b.Device = ds.GetDeviceById(id.Value);
+            bs.AddItemToBasket(b);
 
             return RedirectToAction("Index");
         }
 
-        [Authorize]
-        [HttpGet]
-        public ActionResult Index()
-        {
-            List<Basket> items = new List<Basket>();
-
-            string user = User.Identity.Name;
-            items = ps.GetBasketItems(user);
-
-            PriceCalculator calculator = new PriceCalculator(items);
-            ViewBag.TotalePrijs = calculator.BerekenPrijs();
-
-            return View(items);
-        }
+        
 
         public int ItemsInBasket()
         {
-            return ps.GetBasketItems(User.Identity.Name).Count;
+            return bs.GetBasketItems(User.Identity.Name).Count;
         }
     }
 }

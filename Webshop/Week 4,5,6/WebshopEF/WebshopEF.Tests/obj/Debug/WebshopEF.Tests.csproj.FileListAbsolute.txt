@@ -53,3 +53,6 @@ C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 3\WebshopEF\Webs
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 3\WebshopEF\WebshopEF.Tests\obj\Debug\WebshopEF.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 3\WebshopEF\WebshopEF.Tests\obj\Debug\WebshopEF.Tests.dll
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 3\WebshopEF\WebshopEF.Tests\obj\Debug\WebshopEF.Tests.pdb
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Tests\obj\Debug\WebshopEF.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Tests\obj\Debug\WebshopEF.Tests.dll
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Tests\obj\Debug\WebshopEF.Tests.pdb

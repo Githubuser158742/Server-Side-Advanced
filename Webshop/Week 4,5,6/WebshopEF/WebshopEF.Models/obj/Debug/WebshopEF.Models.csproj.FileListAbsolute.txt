@@ -1,5 +1,10 @@
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\WebshopEF.Models.dll.config
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\WebshopEF.Models.dll
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\WebshopEF.Models.pdb
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\EntityFramework.dll
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\System.Web.Helpers.dll
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\System.Web.Mvc.dll
@@ -7,6 +12,10 @@ C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\System.Web.WebPages.Deployment.dll
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\System.Web.WebPages.dll
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\EntityFramework.xml
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\System.Web.Helpers.xml
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\System.Web.Mvc.xml
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\System.Web.Razor.xml
@@ -15,12 +24,3 @@ C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\obj\Debug\WebshopEF.Models.dll
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\obj\Debug\WebshopEF.Models.pdb
-C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\WebshopEF.Models.dll.config
-C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\EntityFramework.dll
-C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\EntityFramework.xml
-C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\WebshopEF.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml

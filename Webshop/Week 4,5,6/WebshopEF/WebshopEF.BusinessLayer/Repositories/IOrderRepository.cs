@@ -1,8 +1,10 @@
 ﻿using System;
+using WebshopEF.Models;
 namespace WebshopEF.Repositories
 {
-    interface IOrderRepository
+    public interface IOrderRepository
     {
-        void SaveOrder(WebshopEF.Models.Order order, System.Collections.Generic.List<WebshopEF.Models.Basket> items);
+        void SaveOrder(Order order);
+        void SaveOrderToQueue(string order);
     }
 }

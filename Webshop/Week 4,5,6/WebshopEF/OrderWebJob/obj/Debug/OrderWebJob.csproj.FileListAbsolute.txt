@@ -1,0 +1,1 @@
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 4,5,6\WebshopEF\OrderWebJob\obj\Debug\OrderWebJob.csprojResolveAssemblyReference.cache

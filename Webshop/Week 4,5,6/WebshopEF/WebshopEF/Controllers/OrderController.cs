@@ -4,16 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebshopEF.Models;
-using WebshopEF.Services;
+using WebshopEF.BusinessLayer.Services;
 
 namespace WebshopEF.Controllers
 {
     public class OrderController : Controller
     {
-        private IProductService ps;
-        public OrderController(IProductService ps)
+        private IOrderService os = null;
+        private IBasketService bs = null;
+        public OrderController(IOrderService os,IBasketService bs)
         {
-            this.ps = ps;
+            this.os = os;
+            this.bs = bs;
         }
 
         [HttpGet]
@@ -28,10 +30,20 @@ namespace WebshopEF.Controllers
             if (!ModelState.IsValid)
                 return RedirectToAction("Checkout");
 
-            List<Basket> items = ps.GetBasketItems(User.Identity.Name);
+            List<Basket> items = bs.GetBasketItems(User.Identity.Name);
+            List<OrderLine> orderlines = new List<OrderLine>();
 
-            ps.SaveOrder(o, items);
-            ps.UpdateBasket(User.Identity.Name);
+            foreach(Basket b in items)
+            {
+                OrderLine ol = new OrderLine();
+                ol.Basket = b;
+                orderlines.Add(ol);
+            }
+
+            o.Items = orderlines;
+            string json = Newtonsoft.Json.JsonConvert.SerializeObject(o);
+            os.SaveOrderToQueue(json);
+            bs.UpdateBasket(User.Identity.Name);
 
             return RedirectToAction("Thanks");
         }

@@ -1,8 +1,7 @@
 ﻿using System;
-using WebshopEF.Models;
-namespace WebshopEF.Repositories
+namespace WebshopEF.BusinessLayer.Services
 {
-    public interface IBasketRepository:IGenericRepository<Basket>
+    public interface IBasketService
     {
         void AddItemToBasket(WebshopEF.Models.Basket b);
         System.Collections.Generic.List<WebshopEF.Models.Basket> GetBasketItems(string user);

@@ -3,7 +3,7 @@ using Microsoft.Practices.Unity;
 using Unity.Mvc5;
 using WebshopEF.Repositories;
 using WebshopEF.Models;
-using WebshopEF.Services;
+using WebshopEF.BusinessLayer.Services;
 using WebshopEF.Controllers;
 
 namespace WebshopEF
@@ -17,8 +17,12 @@ namespace WebshopEF
             container.RegisterType<IGenericRepository<Framework>, GenericRepository<Framework>>();
             container.RegisterType<IGenericRepository<OS>, GenericRepository<OS>>();
             container.RegisterType<IDeviceRepository, DeviceRepository>();
-            container.RegisterType<IProductService, ProductService>();
+            container.RegisterType<IDeviceService, DeviceService>();
             container.RegisterType<AccountController>(new InjectionConstructor());
+            container.RegisterType<IBasketService, BasketService>();
+            container.RegisterType<IBasketRepository, BasketRepository>();
+            container.RegisterType<IOrderService, OrderService>();
+            container.RegisterType<IOrderRepository, OrderRepository>();
 
             
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));

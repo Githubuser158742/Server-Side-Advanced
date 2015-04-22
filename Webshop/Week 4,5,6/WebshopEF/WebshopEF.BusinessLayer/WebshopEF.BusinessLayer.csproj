@@ -136,8 +136,12 @@
     <Compile Include="Repositories\IGenericRepository.cs" />
     <Compile Include="Repositories\IOrderRepository.cs" />
     <Compile Include="Repositories\OrderRepository.cs" />
-    <Compile Include="Services\IProductService.cs" />
-    <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\BasketService.cs" />
+    <Compile Include="Services\DeviceService.cs" />
+    <Compile Include="Services\IBasketService.cs" />
+    <Compile Include="Services\IDeviceService.cs" />
+    <Compile Include="Services\IOrderService.cs" />
+    <Compile Include="Services\OrderService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebshopEF.Models\WebshopEF.Models.csproj">
