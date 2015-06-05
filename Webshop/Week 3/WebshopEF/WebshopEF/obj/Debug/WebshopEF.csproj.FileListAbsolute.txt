@@ -254,3 +254,4 @@ C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 3\WebshopEF\Webs
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 3\WebshopEF\WebshopEF\bin\Unity.Mvc5.dll
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 3\WebshopEF\WebshopEF\bin\Microsoft.Practices.Unity.xml
 C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 3\WebshopEF\WebshopEF\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Jim\Documents\GitHub\Server-Side-Advanced\Webshop\Week 3\WebshopEF\WebshopEF\obj\Debug\WebshopEF.csprojResolveAssemblyReference.cache
